@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Detail View Controller-->
+        <scene sceneID="Z6r-r0-vln">
+            <objects>
+                <viewController storyboardIdentifier="DetailViewController" automaticallyAdjustsScrollViewInsets="NO" id="Qau-3N-XBx" customClass="DetailViewController" customModule="AGHSlideMenu" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="9E3-Pg-mtT"/>
+                        <viewControllerLayoutGuide type="bottom" id="t0y-Jm-ueL"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="SqD-Y5-HBn">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="State 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3bD-b5-52r">
+                                <rect key="frame" x="160.5" y="434" width="93.5" height="38.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="3bD-b5-52r" firstAttribute="centerY" secondItem="WdS-sK-zbi" secondAttribute="centerY" id="nRZ-X0-55Z"/>
+                            <constraint firstItem="3bD-b5-52r" firstAttribute="centerX" secondItem="WdS-sK-zbi" secondAttribute="centerX" id="o5h-PK-Wod"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="WdS-sK-zbi"/>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <connections>
+                        <outlet property="stateLabel" destination="3bD-b5-52r" id="TSo-Ke-d3B"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cCK-Rf-uby" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="878" y="113"/>
+        </scene>
+        <!--Menu View Controller-->
+        <scene sceneID="aXk-Pv-K1K">
+            <objects>
+                <viewController storyboardIdentifier="MenuViewController" automaticallyAdjustsScrollViewInsets="NO" id="MNX-9V-tUG" customClass="MenuViewController" customModule="AGHSlideMenu" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="b9E-1m-RnI"/>
+                        <viewControllerLayoutGuide type="bottom" id="mec-At-g8V"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="GSL-8q-XBu">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="fcN-vX-fFP">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MenuOptionTableViewCell" id="0GQ-EC-IFP">
+                                        <rect key="frame" x="0.0" y="55.5" width="414" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="0GQ-EC-IFP" id="rqs-41-qmG">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="MNX-9V-tUG" id="ePX-XH-Rmr"/>
+                                    <outlet property="delegate" destination="MNX-9V-tUG" id="lGh-Au-zVV"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.25098039220000001" green="0.25098039220000001" blue="0.25490196079999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="fcN-vX-fFP" firstAttribute="leading" secondItem="HFk-MA-3Au" secondAttribute="leading" id="03i-G1-jqP"/>
+                            <constraint firstItem="HFk-MA-3Au" firstAttribute="trailing" secondItem="fcN-vX-fFP" secondAttribute="trailing" id="MG7-tT-KVi"/>
+                            <constraint firstItem="fcN-vX-fFP" firstAttribute="top" secondItem="HFk-MA-3Au" secondAttribute="top" id="YV0-BD-4xk"/>
+                            <constraint firstItem="HFk-MA-3Au" firstAttribute="bottom" secondItem="fcN-vX-fFP" secondAttribute="bottom" id="l7r-WI-d45"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="HFk-MA-3Au"/>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <connections>
+                        <outlet property="contentTableView" destination="fcN-vX-fFP" id="qVD-8e-awe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UeZ-6D-OEQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="878" y="771"/>
+        </scene>
+    </scenes>
+</document>
